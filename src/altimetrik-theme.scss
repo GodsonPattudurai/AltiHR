@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$altimetrik-theme-primary: mat-palette($mat-deep-orange);
+$altimetrik-theme-accent:  mat-palette($mat-pink, A200, A100, A400);
+$altimetrik-theme-warn:    mat-palette($mat-red);
+
+$altimetrik-theme: mat-light-theme($altimetrik-theme-primary, $altimetrik-theme-accent, $altimetrik-theme-warn);
+
+@include angular-material-theme($altimetrik-theme);
