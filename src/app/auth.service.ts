@@ -3,7 +3,9 @@ export class AuthService {
   loggedIn = false;
 
   isAuthenticated(){
-    this.loggedIn = true;
+    if (localStorage.getItem('isLogin') !== null && localStorage.getItem('isLogin') !== '') {
+      this.loggedIn = true;
+    }
     const promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(this.loggedIn);

@@ -6,7 +6,7 @@ import { BaseLayoutComponent } from './base-layout/base-layout.component';
 import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: 'app', component: BaseLayoutComponent, children: [
+  { path: 'app', canActivate: [AuthGuard], component: BaseLayoutComponent, children: [
     { path: 'bank-account', component: BankAccountComponent }
   ]},
   { path: 'login', component: LoginComponent },

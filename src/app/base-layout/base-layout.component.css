@@ -16,9 +16,15 @@
     right: 0;
   }
   .logo-style{
-      right: 0;
-      position: absolute;
-      padding-right: 30px;
+      cursor: pointer;
+  }
+  .user-style{
+    right: 10%;
+    position: absolute;
+  }
+  .logout-style{
+    right: 0;
+    position: absolute;
   }
   .card-style{
       height: 85%;
@@ -29,4 +35,4 @@
   }
   .menu-bg a:hover{
       background-color: #ff5722!important;
-  }
+  } 

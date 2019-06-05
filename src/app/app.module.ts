@@ -12,6 +12,8 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 
 let config = new AuthServiceConfig([
@@ -46,7 +48,7 @@ export function provideConfig() {
   providers: [{
     provide: AuthServiceConfig,
     useFactory: provideConfig
-  }],
+  }, AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

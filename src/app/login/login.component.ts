@@ -14,12 +14,16 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    if (localStorage.getItem('isLogin') !== null && localStorage.getItem('isLogin') !== '') {
+      this.router.navigate(['/app/bank-account']);
+    }
   }
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then(
       (userData) => {
-        console.log('sign in data :', userData);
+        localStorage.setItem('isLogin', JSON.stringify(userData));
+        localStorage.setItem('loginTime', new Date().toString());
         this.router.navigate(['/app/bank-account']);
       });
   }

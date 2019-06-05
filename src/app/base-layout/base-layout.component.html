@@ -1,7 +1,8 @@
 <div class="basic-container">
   <mat-toolbar class="toolbar" color="primary">
-      <button mat-icon-button (click)="snav.open()"><mat-icon>menu</mat-icon></button>
-      <img class="logo-style" width="150" height="50" src="assets/logo.png"/>
+      <img class="logo-style" (click)="snav.open()" width="150" height="50" src="assets/logo.png"/>
+      <button class="user-style" mat-icon-button ><mat-icon>person</mat-icon> {{user.name}}</button>
+      <button class="logout-style" (click)="logout()" mat-icon-button ><mat-icon>logout</mat-icon></button>
   </mat-toolbar>
   
   <mat-sidenav-container class="sidenav-container">
@@ -15,5 +16,5 @@
               <router-outlet></router-outlet>
           </div>
       </mat-sidenav-content>
-    </mat-sidenav-container> 
+    </mat-sidenav-container>
 </div>

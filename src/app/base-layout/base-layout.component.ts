@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'angularx-social-login';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-base-layout',
@@ -8,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class BaseLayoutComponent implements OnInit {
 
   fillerNav: any;
-
-  constructor() { }
+  user: any;
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.fillerNav = [
@@ -28,7 +30,14 @@ export class BaseLayoutComponent implements OnInit {
       {name: 'Leave Self Service', href: '', icon: 'time_to_leave'},
       {name: 'Helpdesk', href: '', icon: 'help'}
     ];
+
+    this.user = JSON.parse(localStorage.getItem('isLogin'));
   }
 
-  
+  logout(): void {
+    this.authService.signOut();
+    localStorage.removeItem('isLogin');
+    localStorage.removeItem('loginTime');
+    this.router.navigate(['/login']);
+  }
 }
