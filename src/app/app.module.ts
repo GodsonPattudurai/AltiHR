@@ -9,10 +9,28 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
 import { BankAccountComponent } from './bank-account/bank-account.component';
 
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from 'angularx-social-login';
+import { LoginComponent } from './login/login.component';
+import { BaseLayoutComponent } from './base-layout/base-layout.component';
+
+
+let config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('280647798739-kkjdt052itbnghnk5enrhni7l3hednfo.apps.googleusercontent.com')
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
+
 @NgModule({
   declarations: [
     AppComponent,
-    BankAccountComponent
+    BankAccountComponent,
+    LoginComponent,
+    BaseLayoutComponent
   ],
   imports: [
     BrowserModule,
@@ -22,9 +40,13 @@ import { BankAccountComponent } from './bank-account/bank-account.component';
     MaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    SocialLoginModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{
+    provide: AuthServiceConfig,
+    useFactory: provideConfig
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
