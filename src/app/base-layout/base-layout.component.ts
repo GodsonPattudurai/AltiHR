@@ -24,7 +24,7 @@ export class BaseLayoutComponent implements OnInit {
       {name: 'Flexible Benefit Options', href: '', icon: 'supervised_user_circle'},
       {name: 'Zeta Meal Card - FAQ', href: 'zeta-faq', icon: 'credit_card'},
       {name: 'Group Medical Insurance', href: 'medical-insurance', icon: 'local_hospital'},
-      {name: 'Income Tax Declaration', href: '', icon: 'star'},
+      {name: 'Income Tax Declaration', href: 'tax', icon: 'star'},
       {name: 'Provident Fund Options', href: '', icon: 'content_copy'},
       {name: 'PF Transfer', href: '', icon: 'insert_chart'},
       {name: 'Leave Self Service', href: '', icon: 'time_to_leave'},

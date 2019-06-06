@@ -9,6 +9,7 @@ import { ZetaFaqComponent } from './zeta-faq/zeta-faq.component';
 import { HelpComponent } from './help/help.component';
 import { MedicalInsuranceComponent } from './medical-insurance/medical-insurance.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TaxComponent } from './tax/tax.component';
 
 const routes: Routes = [
   { path: 'app', canActivate: [AuthGuard], component: BaseLayoutComponent, children: [
@@ -17,7 +18,8 @@ const routes: Routes = [
     { path: 'zeta-faq', component: ZetaFaqComponent },
     { path: 'help', component: HelpComponent },
     { path: 'medical-insurance', component: MedicalInsuranceComponent },
-    { path: 'welcome', component: WelcomeComponent }
+    { path: 'welcome', component: WelcomeComponent },
+    { path: 'tax', component: TaxComponent }
   ]},
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: 'login', pathMatch: 'full' }

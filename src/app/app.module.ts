@@ -19,6 +19,7 @@ import { ZetaFaqComponent } from './zeta-faq/zeta-faq.component';
 import { HelpComponent } from './help/help.component';
 import { MedicalInsuranceComponent } from './medical-insurance/medical-insurance.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TaxComponent } from './tax/tax.component';
 
 
 let config = new AuthServiceConfig([
@@ -42,7 +43,8 @@ export function provideConfig() {
     ZetaFaqComponent,
     HelpComponent,
     MedicalInsuranceComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TaxComponent
   ],
   imports: [
     BrowserModule,
