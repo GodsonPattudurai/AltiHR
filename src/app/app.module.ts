@@ -14,6 +14,11 @@ import { LoginComponent } from './login/login.component';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
 import { AuthService } from './auth.service';
 import { AuthGuard } from './auth-guard.service';
+import { HolidayComponent } from './holiday/holiday.component';
+import { ZetaFaqComponent } from './zeta-faq/zeta-faq.component';
+import { HelpComponent } from './help/help.component';
+import { MedicalInsuranceComponent } from './medical-insurance/medical-insurance.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 let config = new AuthServiceConfig([
@@ -32,7 +37,12 @@ export function provideConfig() {
     AppComponent,
     BankAccountComponent,
     LoginComponent,
-    BaseLayoutComponent
+    BaseLayoutComponent,
+    HolidayComponent,
+    ZetaFaqComponent,
+    HelpComponent,
+    MedicalInsuranceComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

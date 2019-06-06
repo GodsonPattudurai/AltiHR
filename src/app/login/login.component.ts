@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     if (localStorage.getItem('isLogin') !== null && localStorage.getItem('isLogin') !== '') {
-      this.router.navigate(['/app/bank-account']);
+      this.router.navigate(['/app/welcome']);
     }
   }
 
@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
       (userData) => {
         localStorage.setItem('isLogin', JSON.stringify(userData));
         localStorage.setItem('loginTime', new Date().toString());
-        this.router.navigate(['/app/bank-account']);
+        this.router.navigate(['/app/welcome']);
       });
   }
 
