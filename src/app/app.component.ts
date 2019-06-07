@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit{
 
+  helpflag:boolean = false;
+
   ngOnInit() {
   }
 
   constructor() { }
 
+  openHelp() : void{
+    this.helpflag = true;
+  }
+
+  closeHelp() : void{
+    this.helpflag = false;
+  }
 }

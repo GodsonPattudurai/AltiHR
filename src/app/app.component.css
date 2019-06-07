@@ -1,0 +1,33 @@
+.fab-style{
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    position: absolute;
+    z-index: 10;
+}
+.master-card-style{
+    padding: 0;
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    z-index: 11;
+}
+.close-style{
+    position: absolute;
+    right: 15px;
+}
+.text-style{
+    position: absolute;
+    bottom: 0;
+}
+.user-text .mat-card{
+    background-color: antiquewhite;
+}
+.bot-text .mat-card{
+    background-color: azure;
+}

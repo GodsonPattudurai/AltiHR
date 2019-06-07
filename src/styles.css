@@ -20,6 +20,9 @@ body span{
 table {
     width: 100%;
 }
+.w75 {
+    width: 75%;
+}
 .form-container {
     display: flex;
     flex-direction: column;
@@ -33,4 +36,13 @@ table {
 .button-row{
     text-align: right;
 }
-  
+.full-width {
+    width: 100%;
+}
+.plb10{
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.cursor-pointer{
+    cursor: pointer;
+}

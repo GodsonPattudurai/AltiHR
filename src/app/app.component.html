@@ -1,1 +1,23 @@
 <router-outlet></router-outlet>
+
+<mat-card class="master-card-style" *ngIf="helpflag">
+    <mat-card-title>
+        <mat-toolbar class="toolbar" color="primary">
+            <span>Talk to us</span>
+            <mat-icon class="close-style cursor-pointer" (click)="closeHelp()">close</mat-icon>
+        </mat-toolbar>
+    </mat-card-title>
+    <mat-card-content>
+            <div class="user-text w75 plb10">
+                <mat-card>Simple card</mat-card>
+            </div>
+            <div class="bot-text w75 plb10">
+                <mat-card>Simple card</mat-card>
+            </div>
+            <mat-form-field class="full-width text-style">
+                <input matInput>
+            </mat-form-field>
+    </mat-card-content>
+</mat-card>
+
+<button mat-fab color="primary" class="fab-style" (click)="openHelp()"><mat-icon>contact_support</mat-icon></button>
