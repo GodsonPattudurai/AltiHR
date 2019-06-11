@@ -14,6 +14,11 @@ export class LoginComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
+    /* ---------- */
+    localStorage.setItem('isLogin', JSON.stringify({name: 'Altimetrik'}));
+    localStorage.setItem('loginTime', new Date().toString());
+    this.router.navigate(['/app/welcome']);
+     /* ---------- */
     if (localStorage.getItem('isLogin') !== null && localStorage.getItem('isLogin') !== '') {
       this.router.navigate(['/app/welcome']);
     }
