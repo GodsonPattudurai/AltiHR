@@ -62,3 +62,6 @@ table {
 .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
     border-color: #ff5722!important;
 }
+.mat-radio-label{
+    margin: 5px;
+}

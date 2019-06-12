@@ -30,6 +30,7 @@
               {
                 "input" : "src/altimetrik-theme.scss"
               },
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []

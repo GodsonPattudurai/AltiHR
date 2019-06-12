@@ -7,4 +7,133 @@
   </mat-card-content>
 </mat-card>
 
-<iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=gDzL6VZBOUyn_mj-Qno9Rnu2SbzUwU1KgPjySruCjvxUQlFXUFBKQjNZU0UxRElXRkk3UDhEUDlVRi4u" style="width:100%; height:100%;" frameborder="0"></iframe>
+<mat-vertical-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup" label="Info">
+            <h2>Group Mediclaim Policy - 2018-19</h2>
+            <p>You and your nuclear family (Definition of nuclear family : Spouse + max. of 2 children and dependent parents/parents in Law) are covered up to the opted insurance per year on a family floater basis. You need to enrol your immediate family (Spouse & 2 Children and dependent parents/parents in law) on or before the 3rd of the subsequent month of joining if you wish to do so. Medical Insurance cover for you will be effected by default from the date of your Date of Joining. However, you MUST enrol your dependents by submission of details on or before the 3rd of the subsequent month of joining. Employees have an option to include either their Parents or Parents-in-Law, to be covered in pairs and mid-year inclusion of parents post the enrolment window period is not allowed. Mid-term inclusion of only new born babies (within 45 days of the child birth) and newly married spouse (within 45 days from the date of marriage) is allowed. The insurance coverage for the newly acquired dependent (spouse/child) will be with effect from the date of event (marriage/ birth whichever is applicable), subject to enrolling the new dependent within 45 days from the date of event. Feel free to raise a query on Unified Helpdesk for clarifications, if any.</p>
+            <br><p>NOTE: Default Insurance Cover is INR 1.5 Lakhs.</p>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Insurance coverage option">
+        <div class="mb20">
+            <h3>Insurance coverage option</h3>
+            <p>Whilst we encourage you refer to the Group Mediclaim Policy presentation for details on the Insurance premium, we have also provide the same in the options above. Please note that the insurance premium provided above is annual amount. Deductions will happen monthly and based on division of the mentioned annual amount by 12 months</p>
+            <mat-radio-group aria-label="Select an option" color="primary">
+              <mat-radio-button value="1">INR 1.5 Lakhs - Annual Insurance Premium is INR 13719</mat-radio-button>
+              <mat-radio-button value="2">INR 2.5 Lakhs - Annual Insurance Premium is INR 16689</mat-radio-button>
+              <mat-radio-button value="2">INR 3.5 Lakhs - Annual Insurance Premium is INR 18584</mat-radio-button>
+              <mat-radio-button value="2">INR 5 Lakhs - Annual Insurance Premium is INR 23258</mat-radio-button>
+              <mat-radio-button value="2">INR 7 Lakhs - Annual Insurance Premium is INR 30894</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="mb20">
+            <button mat-button matStepperNext color="primary" type="button">Next</button>
+        </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Dependent Declaration">
+        <mat-card class="mt20">
+            <mat-card-title><b>Employee</b></mat-card-title>
+            <mat-card-content>
+                <div class="mb20 row">
+                    <div class="col-md-6">
+                        <mat-form-field>
+                            <mat-label>Select No of Dependent</mat-label>
+                            <mat-select [(value)]="selected">
+                              <mat-option>None</mat-option>
+                              <mat-option value="1">1</mat-option>
+                              <mat-option value="2">2</mat-option>
+                              <mat-option value="3">3</mat-option>
+                              <mat-option value="4">4</mat-option>
+                              <mat-option value="5">5</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>
+                    <div class="col-md-3">
+                      <label><b>DOB: </b></label>
+                      <mat-form-field class="pl20">
+                        <input matInput [matDatepicker]="picker" placeholder="Date Of Birth">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </div>
+                    <div class="col-md-3">
+                        <label><b>Gender: </b></label>
+                        <mat-radio-group aria-label="Employee Gender" color="primary"  class="pl20">
+                          <mat-radio-button value="1">Male</mat-radio-button>
+                          <mat-radio-button value="2">Female</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                    
+                  </div>
+            </mat-card-content>
+        </mat-card>
+        <div *ngFor="let i of [1,2,3,4,5]">
+            <mat-card class="mt20" *ngIf="i <= selected">
+                <mat-card-title><b>Dependent {{i}}</b></mat-card-title>
+                <mat-card-content>
+                    <div class="mb20 row">
+                        <div class="col-md-3">
+                            <mat-form-field>
+                                <mat-label>Relation</mat-label>
+                                <mat-select [(value)]="selected1">
+                                  <mat-option>None</mat-option>
+                                  <mat-option value="1">Spouse</mat-option>
+                                  <mat-option value="2">Father</mat-option>
+                                  <mat-option value="3">Mother</mat-option>
+                                  <mat-option value="4">Child 1</mat-option>
+                                  <mat-option value="5">Child 2</mat-option>
+                                  <mat-option value="6">Father In Law</mat-option>
+                                  <mat-option value="7">Mother In Law</mat-option>
+                                  <mat-option value="8">Not Applicable</mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <mat-form-field>
+                                <input matInput placeholder="Full Name">
+                              </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                          <label><b>DOB: </b></label>
+                          <mat-form-field class="pl20" *ngIf="i == 1">
+                            <input matInput [matDatepicker]="picker1" placeholder="Date Of Birth">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+                          </mat-form-field>
+                          <mat-form-field class="pl20" *ngIf="i == 2">
+                              <input matInput [matDatepicker]="picker2" placeholder="Date Of Birth">
+                              <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                              <mat-datepicker #picker2></mat-datepicker>
+                            </mat-form-field>
+                            <mat-form-field class="pl20" *ngIf="i == 3">
+                                <input matInput [matDatepicker]="picker3" placeholder="Date Of Birth">
+                                <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                                <mat-datepicker #picker3></mat-datepicker>
+                              </mat-form-field>
+                              <mat-form-field class="pl20" *ngIf="i == 4">
+                                  <input matInput [matDatepicker]="picker4" placeholder="Date Of Birth">
+                                  <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+                                  <mat-datepicker #picker4></mat-datepicker>
+                                </mat-form-field>
+                                <mat-form-field class="pl20" *ngIf="i == 5">
+                                    <input matInput [matDatepicker]="picker5" placeholder="Date Of Birth">
+                                    <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker5></mat-datepicker>
+                                  </mat-form-field>
+                        </div>
+                        <div class="col-md-3">
+                            <label><b>Gender: </b></label>
+                            <mat-radio-group aria-label="Employee Gender" color="primary"  class="pl20">
+                              <mat-radio-button value="1">Male</mat-radio-button>
+                              <mat-radio-button value="2">Female</mat-radio-button>
+                            </mat-radio-group>
+                        </div>
+                      </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+        <div class="mt20 mb20">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </mat-step>
+  </mat-vertical-stepper>
