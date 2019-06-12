@@ -9,4 +9,241 @@
   </mat-card-content>
 </mat-card>
 
-<iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=gDzL6VZBOUyn_mj-Qno9Rlvg8QLGGB9MskMOXC4Jm-NUQTVFUlU4OFk5R1BDWlhEOTQ0U0MyWjdNQy4u" style="width:100%; height:100%;" frameborder="0"></iframe>
+<mat-vertical-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup" label="Info">
+            <h2>Altimetrik INDIA : Income Tax Declaration for FY 2019-20</h2>
+            <p>Income Tax declaration is an once in a year excercise: Please ensure concious compliance to avoid higher than elligible income tax deduction from your subsequent monthly salaries.</p> 
+            <p>Please fill in the answers to the questions which are applicable to you. You can choose to keep rest of the fields blank. You can submit multiple responses within the permitted time window, we will accept the last response from you as the final one.</p>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Declaration">
+        <div class="mb20">
+            <h5><b>HRA: Rent Paid per month</b></h5>
+            <p>Please Note: Paying guest rent and lease payments do not qualify for exemption. You will require to submit a valid rental agreement copy during end of the financial year to validate this claim.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>HRA: Enter PAN of your house owner if the monthly rent paid amount is more than INR 8300</b></h5>
+            <p>Please Note: Rent amount will be restricted to 8300 per month in absence of a valid PAN for computing the exemption.</p>
+            <mat-form-field>
+                <input matInput placeholder="Enter your answer">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>HRA: Please enter Address of rented property</b></h5>
+            <mat-form-field>
+                <textarea matInput placeholder="Enter your answer"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>Housing Loan Exemption: Enter Date of possession</b></h5>
+            <p>Please Note: Exemption is applicable only when possession of the house property is received, or the date of possession is expected to be received on or before 31st march 2020.</p>
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" placeholder="Please enter date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>Housing Loan Exemption: Enter provisional amount of Principal payable during the financial year</b></h5>
+            <p>This exemption is part of chapter VI exemption, upto the maximum of INR 150000 per financial year.</p>
+            <mat-form-field>
+                <input matInput placeholder="Enter your answer">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>Housing Loan Exemption: Enter Provisional amount of Interest Payble during the financial year</b></h5>
+            <p>This exemption is over and above the chapter VI exemptions. Maximum amount available for exemption is 200000 for the entire financial year. This is over an above the 150000 exmption limit under chapter VI. The exemption limit is applicable for all house properties ( self occupied or let out ) put together.</p>
+            <mat-form-field>
+                <input matInput placeholder="Enter your answer">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80C Exemptions - Public Provident Fund</b></h5>
+            <p>Enter amount you propose to invest in PPF during this financial year for you and your family</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTION: 80C Exemptions - Life Insurance Premium</b></h5>
+            <p>Enter amount you propose to pay as primium of Life Insurance Policy during this financial year for you and your family</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTION: 80C Exemptions - Unit Linked Insurance Plan</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+        
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80C Exemption - Deposit to Sukanya Samrudhhi Account</b></h5>
+            <p>Exemption is available for contributions made to Sukanya Samrudhhi Account in the name of GIRL child to the maximum of two children.  </p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80C Exemption - Deposit to Mutual Funds</b></h5>
+            <p>Exemption is available only for funds as specified by the section 80C of Income Tax. Please note: All Mutual fund investments are not applicable for income tax exemption. Kindly ensure it is a tax saver Investment  before actually buying one for tax saving purpose. </p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80C Exemption - Deposit to Tax saver term Deposit / Fixed Deposit</b></h5>
+            <p>Exemption is available only for deposit to specific tax saver fixed deposits with lock in period of 5 years. Please note that all investments to fixed deposit is not applicable for tax exemption.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80C Exemption - Tution Fees Paid for Children Education</b></h5>
+            <p>Please Note: Only the Tution fees paid is applicable for exemption on actual payment basis. Any amount paid for other purposes like transportation, books, admission, donation etc are not allowable as exemption.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80CCC Contribution to Pension Fund</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: Contribution to National Saving Certificate (NSC)</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80D - Premium on Mediclaim Insurance for self and family</b></h5>
+            <p>Please note: The amount being deducted from your salary as premium of group medical insurance policy will be automatically taken, while computing the income tax deduction. NO NEED TO DECLARE HERE AGAIN. Please declare here in case you have another policy on you or your families name in addition to such. </p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80D - Premium on Mediclaim Insurance for Senior Citizen</b></h5>
+            <p>here is an additional exemption limit of upto INR 50,000 for mediclaim insurance taken on famility members / Parents who are also senior citizen. Please note: The amount being deducted from your salary as premium of group medical insurance policy will be automatically included for exemption, while computing the income tax deduction. NO NEED TO DECLARE HERE AGAIN. PLEASE DECLARE HERE IN CASE YOU HAVE ANOTHER POLICY ON YOU OR ON YOUR FAMILY IN ADDITION TO SUCH.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80D - Amount Spent on Preventive Health Check up of self and family</b></h5>
+            <p>Please note: Exemption under this is restricted upto INR 5000 per financial year</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80CCD(1B) - NPS Voluntary contribution</b></h5>
+            <p>Please note: If you are already a NPS contributer through your salary, the exemption of such will automatically be included in your tax computation. This section is for declaring any amount deposited by you to your NPS account in addition to the contributions made through salary. </p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80E - Interest on Education Loan</b></h5>
+            <p>Please note: Only the interest portion of the EMI paid during the financial year is applicable for excemption.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80DD - Medical treatment of Handicapped Dependants</b></h5>
+            <p>Please note: You would need to submit a copy of handicapped certificate on your dependants name, during the end of the financial year</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>CHAPTER VI EXEMPTIONS: 80DDB - Medical treatment of SPECIFIED Ailments of self and Dependant Relatives.</b></h5>
+            <p>Please note: Exemption relates to certain diseases as specified by the section 80DDB of the Income Tax Act. This is not applicable for any general treatement. You would need to submit a copy of a certificate confirming the specified disese during the end of the financial year.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: TAN of the employer</b></h5>
+            <p>Please attempt to fill this section only if you have joined Altimetrik after 1st April 2018 and you have Income and Tax deductions to declare for the financial year 2019-20. This is only for Incomes and Taxes after 1st of April 2019.</p>
+            <mat-form-field>
+                <input matInput placeholder="Enter your answer">
+            </mat-form-field>
+        </div>
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: Name of the Previous employer</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="Enter your answer">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: Taxable Income achieved</b></h5>
+            <p>Only Taxable income after all deductions should be declared. INCOME RECEIVED AFTER 1st APRIL 2019 AND TILL THE DATE OF JOINING WITH ALTIMETRIK ONLY SHOULD BE DECLARED. Please take care not to declare entire year projected number, which would entail higher income tax deduction. DO NOT DECLARE PREVIOUS YEARS INCOME HERE.</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: Provident Fund Amount deducted from Salary</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: Other Chapter VI deduction availed during previous employment</b></h5>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>PREVIOUS EMPLOYMENT: Income tax deducted by the previous employer</b></h5>
+            <p>Amount of income tax deducted as TDS by the previous employer during the current financial year, before joining Altimetrik. Please note the period starts from 1st April 2019 and till the date you join Altimetrik</p>
+            <mat-form-field>
+                <input matInput placeholder="The value must be a number">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <h5><b>Section 80U – Tax Deduction for Disabled Individuals</b></h5>
+            <p>Kindly declare personal disability beyond 40%. You would require to submit a certificate from competent medical practitioner during end of the financial year to substantiate this claim.</p>
+            <mat-form-field>
+                <input matInput placeholder="Please enter a number greater than 0">
+            </mat-form-field>
+        </div>
+
+        <div class="mb20">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </mat-step>
+  </mat-vertical-stepper>
