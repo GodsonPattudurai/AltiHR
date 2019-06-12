@@ -1,0 +1,25 @@
+  <mat-vertical-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup" label="Info">
+            <h2>Altimetrik INDIA | Provident Fund Options Declaration | FY 2019-20</h2>
+            <p>Employees Provident Fund Act 1952 allowes to contribute to your Provident Fund Account either of the follwing two:</p>
+            <p>OPTION I. 12% of your Basic pay per month ( For Example if Basic Pay is INR 50000 per month, contribution to Your EPFO account would be INR 12000 per month; INR 6000 as employees contribution and another INR 6000 as employers Contribution)</p>
+            <p>OPTION II. 12% of notional basic of INR 15000 per month, i.e INR 1800 per month as employees contribution and another INR 1800 per month as employer contribution. ( The differential amount of  INR 4200 is added with FBP component as taxable salary to keep the CTC per month as Fixed.</p>
+            <p>Option II would ensure restricting or reducing the contribution to PF to increase take home pay as a result however it also means increased Income tax liability and reduction in corpus you en cash at your retirement.</p>
+            <p>This form is designed to receive your choices between the two options. Kindly note the following before deciding and exercising your PF option:</p>
+            <p>1. Your CTC remain constant irrespective of your choice made, and the differential salary is adjusted with your FBP (flexible Benefit Pay) component in your salary.</p>
+            <p>2. This option is static, and not available for edit again, due to statutory restrictions, thus your careful deliberation is requested before you make your choice.</p>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Declaration">
+        <div class="mb20">
+            <h3>Provident Fund Options:</h3>
+            <p>Please choose if you want to restrict your contribution to your Provident Fund Account or not by choosing the appropriate option. </p>
+            <mat-radio-group aria-label="Select an option" color="primary">
+              <mat-radio-button value="1">OPTION I: 12% of Full Basic  </mat-radio-button>
+              <mat-radio-button value="2">OPTION II: Restricted contribution @INR 1800 per month </mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div class="mb20">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </mat-step>
+  </mat-vertical-stepper>

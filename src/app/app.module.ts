@@ -20,6 +20,9 @@ import { HelpComponent } from './help/help.component';
 import { MedicalInsuranceComponent } from './medical-insurance/medical-insurance.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { TaxComponent } from './tax/tax.component';
+import { EmployeeContactComponent } from './employee-contact/employee-contact.component';
+import { FlexibleBenefitOptionsComponent } from './flexible-benefit-options/flexible-benefit-options.component';
+import { PfOptionsComponent } from './pf-options/pf-options.component';
 
 
 let config = new AuthServiceConfig([
@@ -44,7 +47,10 @@ export function provideConfig() {
     HelpComponent,
     MedicalInsuranceComponent,
     WelcomeComponent,
-    TaxComponent
+    TaxComponent,
+    EmployeeContactComponent,
+    FlexibleBenefitOptionsComponent,
+    PfOptionsComponent
   ],
   imports: [
     BrowserModule,

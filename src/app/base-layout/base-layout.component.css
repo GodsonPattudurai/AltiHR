@@ -32,6 +32,7 @@
   }    
   .menu-bg{
       background-color: #1e2129!important;
+      height: 98.5%;
   }
   .menu-bg a:hover{
       background-color: #ff5722!important;

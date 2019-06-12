@@ -15,19 +15,19 @@ export class BaseLayoutComponent implements OnInit {
 
   ngOnInit() {
     this.fillerNav = [
-      {name: 'Atlas', href: '', icon: 'bubble_chart'},
+      /*{name: 'Atlas', href: '', icon: 'bubble_chart'},*/
       {name: 'Y2019 Holidays', href: 'holiday', icon: 'av_timer'},
-      {name: 'Employee Contact Points', href: '', icon: 'perm_contact_calendar'},
-      {name: 'Learning Management System', href: '', icon: 'library_books'},
-      {name: 'Employee Self Service', href: '', icon: 'border_all'},
+      {name: 'Employee Contact Points', href: 'employee-contact', icon: 'perm_contact_calendar'},
+      /*{name: 'Learning Management System', href: '', icon: 'library_books'},
+      {name: 'Employee Self Service', href: '', icon: 'border_all'},*/
       {name: 'Salary Account', href: 'bank-account', icon: 'account_balance'},
-      {name: 'Flexible Benefit Options', href: '', icon: 'supervised_user_circle'},
+      {name: 'Flexible Benefit Options', href: 'flexible-benefit-options', icon: 'supervised_user_circle'},
       {name: 'Zeta Meal Card - FAQ', href: 'zeta-faq', icon: 'credit_card'},
       {name: 'Group Medical Insurance', href: 'medical-insurance', icon: 'local_hospital'},
       {name: 'Income Tax Declaration', href: 'tax', icon: 'star'},
-      {name: 'Provident Fund Options', href: '', icon: 'content_copy'},
-      {name: 'PF Transfer', href: '', icon: 'insert_chart'},
-      {name: 'Leave Self Service', href: '', icon: 'time_to_leave'},
+      {name: 'Provident Fund Options', href: 'pf-options', icon: 'content_copy'},
+      /*{name: 'PF Transfer', href: '', icon: 'insert_chart'},
+      {name: 'Leave Self Service', href: '', icon: 'time_to_leave'},*/
       {name: 'Helpdesk', href: 'help', icon: 'help'}
     ];
 

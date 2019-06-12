@@ -6,7 +6,25 @@
   </mat-card-content>
 </mat-card>
 
-<div class="mat-elevation-z8">
+  <mat-card class="mt20">
+    <form class="form-container">
+        <mat-form-field>
+          <input matInput placeholder="Bank Name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Account Number">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="IFSC Code">
+        </mat-form-field>
+        <div class="button-row">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+
+  </mat-card>
+  
+<div class="mat-elevation-z8 mt20">
     <table mat-table [dataSource]="dataSource">
   
       <!-- Position Column -->
@@ -36,22 +54,3 @@
   
     <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
   </div>
-
-  <mat-card class="mt20">
-    <form class="form-container">
-        <mat-form-field>
-          <input matInput placeholder="Bank Name">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="Account Number">
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput placeholder="IFSC Code">
-        </mat-form-field>
-        <div class="button-row">
-            <button mat-raised-button>Cancel</button>
-            <button mat-raised-button color="primary">Save</button>
-        </div>
-    </form>
-
-  </mat-card>

@@ -1,0 +1,65 @@
+<mat-card class="mb20">
+  <mat-card-title><b>Flexible Benefit Options</b></mat-card-title>
+  <mat-card-content>
+    <br>1. Employees have the option of choosing the below 3 benefits for managing their taxes. <br>
+    a) Zeta Cards for Meal Voucher<br>
+    b) Vehicle Maintenance<br>
+    c) National Pension Scheme<br>
+    <br>2. Windows for submission is between 1st to 10th of the month<br>
+    <br>3. For Employees joining post 15th of the month, can enroll in the following month between 1st to 10th
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="mt20">
+  <h3>MEAL REIMBURSEMENT:</h3>
+  <p>#Please choose if you want this component to be part of your salary structure. The amount if opted will be loaded to your ZETA food wallet. </p>
+  <mat-radio-group aria-label="Select an option" color="primary">
+    <mat-radio-button value="1">YES - INR 2200 per month </mat-radio-button>
+    <mat-radio-button value="2">YES - INR 1100 per month </mat-radio-button>
+    <mat-radio-button value="3">NO - I do not want this compoment. (Amount will be added with Flexible Benefit Component)</mat-radio-button>
+  </mat-radio-group>
+</mat-card>
+<mat-card class="mt20">
+    <h3>CONTRIBUTION TO NPS:</h3>
+    <p>#Please use the Other option to declare any amount between INR 500 and 10% of your basic Pay per month, you want to contribute to NPS account every month.</p>
+    <p>#Any amount you contribute to your National Pension Fund account will be exempted from Income Tax.</p>
+    <p>#This amount will be reduced from your monthly Flexible Benefit component and will be deposited to your NPS account. </p>
+    <p>#You would require to open an NPS account to start with this contribution and resulting exemption. </p>
+    <p>#Refer to the following link to know more about NPS: <a href="https://www.npscra.nsdl.co.in/" target="_blank">https://www.npscra.nsdl.co.in/</a></p>
+    <mat-radio-group aria-label="Select an option" color="primary">
+      <mat-radio-button value="1">NO - I do not want this component in my salary </mat-radio-button>
+      <mat-radio-button value="2">YES - INR 500 per month </mat-radio-button>
+      <mat-radio-button value="3">YES - 10% of Basic Pay per month</mat-radio-button>
+      <mat-radio-button value="4">
+          <mat-form-field>
+              <input matInput placeholder="Other">
+            </mat-form-field>
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card>
+  <mat-card class="mt20">
+      <h3>VEHICLE MAINTENANCE: Car engine Capacity declaration.</h3>
+      <p>#This componet can be included in your salary structure if you have a CAR registered in your name, provided you use this car partially on your office purposes (for example commuting to office using this car).</p>
+      <p>#Please raise a ticket with the unified helpdesk to attach a copy of your car registration certificate / smart card for us to validate the ownership. We will reverse the component and the exemption, in case we do not receive this ticket along with the registration certificate / smart card within 15 days of your claiming this component.</p>
+      <p>#This component is not applicable for two wheelers. </p>
+      <p>#The component value is determined based on the exemption suggested by Income Tax act.</p>
+      <p>#The Cubic Capacity of the engine is required to be declaraed here to determine the magnitude of the component and exemption.</p>
+      <p>#Vehicle Maintenance component value is INR 1800 per month for capacity less than 1600cc and INR 2400 per month for capacity more than 1600cc</p>
+      <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-button value="1">YES - Engine capacity is LESS THAN 1600 CC </mat-radio-button>
+        <mat-radio-button value="2">YES - Engine Capacity is MORE THAN 1600 CC </mat-radio-button>
+        <mat-radio-button value="3">NO - I do not want this component</mat-radio-button>
+      </mat-radio-group>
+    </mat-card>
+    <mat-card class="mt20 mb20">
+        <h3>VEHICLE MAINTENANCE: Declaration of Driver.</h3>
+        <p>#An additional amount of INR 900 can be added on your declaration of employment of a driver.</p>
+        <p>#Please raise a ticket with the unified helpdesk to attach a copy of your Driver's Licence for us to validate the same. We will reverse this amount of drivers salary, in case we do not receive this ticket along with the copy of drivers Licence within 15 days of your claiming this component.</p>
+        <mat-radio-group aria-label="Select an option" color="primary">
+          <mat-radio-button value="1">YES - Copy of drivers Licence to be attached </mat-radio-button>
+          <mat-radio-button value="2">NO - I do not employ a Driver </mat-radio-button>
+        </mat-radio-group>
+      </mat-card>
+      <div class="mb20">
+          <button mat-raised-button color="primary">Submit</button>
+      </div>

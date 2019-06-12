@@ -56,3 +56,9 @@ table {
 .ml50{
     margin-left: 50px;
 }
+.mat-radio-label-content{
+    padding-right: 10px !important;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+    border-color: #ff5722!important;
+}
